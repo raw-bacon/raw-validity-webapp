@@ -24,7 +24,7 @@ git switch gh-pages
 git rm *.js *.html *.wasm
 mv dist/* .
 git add .
-git commit -m "deployed using deploy.sh script"
+git commit -m "deployed changes"
 git push origin gh-pages
 ```
 Don't forget to `git switch master` at the end!
