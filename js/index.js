@@ -1,11 +1,18 @@
 import("../pkg/index.js").catch(console.error).then(module => {
-    document.body.innerHTML += '\
-\ \ <input style = "width:500px" type = "text" id = "text_box" placeholder = "Enter an l-group (in)equation ..." >\n\
-\ \ <button id="btn">Check</button>'
 
-    document.getElementById("btn").onclick = function check() {
+    document.getElementById("text_box").focus();
+
+    document.getElementById("form").onsubmit = function check() {
         var input = document.getElementById("text_box").value;
-        alert(module.check_valid(input));
+        document.body.innerHTML += "You submitted " + input + "<br>";
+        document.body.innerHTML += "This formula is ";
+        document.body.innerHTML += "<a id='result_text'>...</a>"
+        if (module.check_valid(input)) {
+            document.getElementById("result_text").innerHTML = "valid!";
+        } else {
+            document.getElementById("result_text").innerHTML = "invalid!";
+        }
     }
+
 });
 
