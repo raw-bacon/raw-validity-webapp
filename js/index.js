@@ -15,6 +15,7 @@ import("../pkg/index.js").catch(console.error).then(module => {
 
         document.getElementById("text_box").focus();
         document.getElementById("form").reset();
+        document.body.innerHTML += "Press ENTER or click Check before submitting a new equation.";
     }
 
 });
