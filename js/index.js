@@ -17,7 +17,7 @@ import("../pkg/index.js").catch(console.error).then(module => {
         document.body.innerHTML += "<br>Press ENTER or click Check before submitting a new equation.";
     }
 
-    document.getElementById("help_button").onsubmit = function help() {
+    document.getElementById("help_button").onclick = function help() {
         document.body.innerHTML += "<ul>";
         document.body.innerHTML += "<li>Names of variables are characters, possibly followed by a number, e.g., <code>x</code> or <code>x31</code>.</ul>"
         document.body.innerHTML += "<li>Meets and joins are denoted by <code>^</code> and <code>v</code>, respectively. This means that the letter <code>v</code> can not appear in the name of a variable.</li>";
