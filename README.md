@@ -21,7 +21,7 @@ node_modules/.bin/webpack
 You can add also add `--release` to all those commands if you want (e.g., `cargo build --release`). Then copy the contents of the `dist` folder into the root of the `gh-pages` branch:
 ```
 git switch gh-pages
-git rm -rf *
+git rm *.js *.html *.wasm
 mv dist/* .
 git add .
 git commit -m "deployed using deploy.sh script"
