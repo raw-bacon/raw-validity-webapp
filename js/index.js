@@ -2,7 +2,7 @@ import("../pkg/index.js").catch(console.error).then(module => {
 
     document.getElementById("text_box").focus();
 
-    document.getElementById("form").onsubmit = function check() {
+    document.getElementById("check_button").onclick = function check() {
         var input = document.getElementById("text_box").value;
         document.body.innerHTML += "You submitted " + input + "<br>";
         document.body.innerHTML += "This formula is ";
