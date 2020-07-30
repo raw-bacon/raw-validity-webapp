@@ -14,7 +14,6 @@ npm install
 # Deploying to GitHub Pages
 In the root of the master branch, run
 ```
-wasm-pack build
 npm install
 node_modules/.bin/webpack
 ```
