@@ -1,0 +1,31 @@
+name: Build and Deploy
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        #node-version: [10.x, 12.x]
+        node-version: [10.x]
+    steps:
+    - name: Checkout ⬇
+      uses: actions/checkout@v2
+    - name: Setup Node.js ${{ matrix.node-version }} 
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm
+      run: npm install
+    - name: webpack build 🛠
+      run: node_modules/.bin/webpack
+    - name: npm test 🚦
+      run: npm test
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        GITHUB_TOKEN: $GITHUB_TOKEN
+        BRANCH: gh-pages
+        FOLDER: dist
+        CLEAN: true
