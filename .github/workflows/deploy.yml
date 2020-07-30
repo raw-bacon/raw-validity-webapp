@@ -16,12 +16,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm
+    - name: npm install
       run: npm install
     - name: webpack build 🛠
       run: node_modules/.bin/webpack
-    - name: npm test 🚦
-      run: npm test
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
