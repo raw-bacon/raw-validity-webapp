@@ -9,9 +9,9 @@ import("../pkg/index.js").catch(console.error).then(module => {
     // onclick for check button
     check_button.onclick = function check() {
         var input = text_box.value;
-        output_div.innerHTML = "You submitted " + input + ".<br>";
+        output_div.innerHTML = "<p>You submitted " + input + ".<br>";
         output_div.innerHTML += "This formula is ";
-        output_div.innerHTML += "<a id='result_text'>...</a>"
+        output_div.innerHTML += "<a id='result_text'>...</a></p>"
         if (module.check_valid(input)) {
             document.getElementById("result_text").innerHTML = "valid!<br>";
         } else {
