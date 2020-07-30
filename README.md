@@ -18,7 +18,7 @@ wasm-pack build
 npm install
 node_modules/.bin/webpack
 ```
-You can add also add `--release` to `wasm-pack build` and `webpack` if you want. Then copy the contents of the `dist` folder into the root of the `gh-pages` branch:
+Then copy the contents of the `dist` folder into the root of the `gh-pages` branch:
 ```
 git switch gh-pages
 git rm *.js *.wasm README.md index.html
