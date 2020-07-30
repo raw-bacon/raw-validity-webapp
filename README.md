@@ -14,7 +14,6 @@ npm install
 # Deploying to GitHub Pages
 In the root of the master branch, run.
 ```
-cargo build
 wasm-pack build
 node_modules/.bin/webpack
 ```

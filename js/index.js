@@ -12,7 +12,8 @@ import("../pkg/index.js").catch(console.error).then(module => {
         } else {
             document.getElementById("result_text").innerHTML = "invalid!";
         }
-    }
 
+        document.getElementById("text_box").focus();
+    }
 });
 
