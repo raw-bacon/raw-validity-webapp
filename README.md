@@ -23,8 +23,8 @@ You can add also add `--release` to `wasm-pack build` and `webpack` if you want.
 git switch gh-pages
 git rm *.js *.html *.wasm
 mv dist/* .
-git add .
 rm -r -f target node_modules
+git add .
 git commit -m "deployed changes"
 git push origin gh-pages
 ```
