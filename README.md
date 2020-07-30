@@ -24,6 +24,7 @@ git switch gh-pages
 git rm *.js *.html *.wasm
 mv dist/* .
 git add .
+rm -r -f target node_modules
 git commit -m "deployed changes"
 git push origin gh-pages
 ```
