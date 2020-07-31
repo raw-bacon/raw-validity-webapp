@@ -15,7 +15,7 @@ npm install
 In the root of the master branch, run
 ```
 npm install
-node_modules/.bin/webpack
+npm run build
 ```
 Then copy the contents of the `dist` folder into the root of the `gh-pages` branch:
 ```
