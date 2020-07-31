@@ -3,13 +3,26 @@ input[type=text] {
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+  font-family: Helvetica;
+  font-size: 16pt;
+}
+
+h1 {
+  font-family: Helvetica;
 }
 
 button {
     padding: 12px 0px;
-    margin: 8px 0;
+    margin: 0px 0;
     box-sizing: border-box;
-    border: 0
+    border: 0;
+    font-family: Helvetica;
+    font-size: 16pt;
+}
+
+p {
+  font-family: Helvetica;
+  font-size: 16pt;
 }
 
 .center {
@@ -17,21 +30,16 @@ button {
   padding: 10px;
 }
 
-div {
-    padding: 12px 20px;
+a, ul {
+  font-family: Helvetica;
+  text-decoration: none;
 }
 
-html *
-{
-   font-size: 16pt;
-   font-family: Helvetica !important;
-}
-
-h1 {
-    font-size: 25pt;
+ul {
+  font-size: 14pt;
 }
 
 a {
-    text-decoration: none;
-    color: #00aaff
+  color: #00aaff;
+  font-size: 16pt;
 }

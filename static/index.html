@@ -8,15 +8,25 @@
   </head>
   <body style="background: #333; color: #fff;">
     <div class="center" style="width: 500px">
-      <h1 style="color: white">The raw-validity Webapp</h1>
-      <p>
-        This program checks validity of l-group formulas. 
-        More information can be found <a href="https://raw-bacon.github.io">here</a>.
-      </p>
-      <input style="width:100%" type="text" id="text_box" placeholder="Enter an l-group (in)equation ...">
-      <button type="button" id="check_button" style="width:240px; float: left">Check</button>
-      <button id="help_button" type="button" style="width:240px; float: right">Help</button>
-      <div id="output"></div>
+      <div>
+        <h1 style="color: white">The raw-validity Webapp</h1>
+        <p>
+          This program checks validity of l-group formulas. 
+          More information can be found <a href="https://raw-bacon.github.io">here</a>.
+        </p>
+      </div>
+      <div>
+        <input style="width:100%" type="text" id="text_box" placeholder="Enter an l-group (in)equation ...">
+      </div>
+      <div style="height: 55px">
+        <div style="width:50%; float: left">
+          <button type="button" id="check_button" style="width:247px; float: left">Check</button>
+        </div>
+        <div style="width:50%; float: right">
+        <button id="help_button" type="button" style="width:247px; float: right">Help</button>
+        </div>
+      </div>
+      <div id="output" style="width: 100%"></div>
     </div>
     <script src="index.js"></script>
       

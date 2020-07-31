@@ -9,9 +9,11 @@ import("../pkg/index.js").catch(console.error).then(module => {
     // onclick for check button
     check_button.onclick = function check() {
         var input = text_box.value;
-        output_div.innerHTML = "<p>You submitted " + input + ".<br>";
-        output_div.innerHTML += "This formula is ";
-        output_div.innerHTML += "<a id='result_text'>...</a></p>"
+        output_div.innerHTML = "<p id=\"response_paragraph\"></p>"
+        response = document.getElementById("response_paragraph");
+        response.innerHTML = "You submitted " + input + ".<br>";
+        response.innerHTML += "This formula is ";
+        response.innerHTML += "<a id='result_text'>...</a></p>"
         if (module.check_valid(input)) {
             document.getElementById("result_text").innerHTML = "valid!<br>";
         } else {
@@ -34,15 +36,15 @@ import("../pkg/index.js").catch(console.error).then(module => {
     document.getElementById("help_button").onclick = function help() {
         var output_div = document.getElementById("output")
 
-        output_div.innerHTML = "<ul>";
-        output_div.innerHTML += "<li>Names of variables are alphabetic characters except <code>v</code> and <code>e</code>, possibly followed by a number, e.g., <code>x</code> or <code>x31</code>.</ul>"
-        output_div.innerHTML += "<li>Inverses of lower-case variables are their upper-case counterpart. E.g., the inverse of <code>x</code> is </code>X</code>.</li>"
-        output_div.innerHTML += "<li>The identity is denoted `e`.</li>"
-        output_div.innerHTML += "<li>Meets and joins are denoted by <code>^</code> and <code>v</code>, respectively. This means that the letter <code>v</code> can not appear in the name of a variable.</li>";
-        output_div.innerHTML += "<li>Inverses are denoted by prefix minus sign (<code>-</code>). Using this notation, the inverse of <code>x v y</code> is <code>-(x v y)</code>.</li>"
-        output_div.innerHTML += "<li>Whitespace and non-alphanumeric characters except <code>^</code>, <code>-</code>, <code>(</code>, and <code>)</code> are ignored. In particular, products do not have a symbol. The product of x v y and z ^ w is (x v z)(z ^ w).</li>"
-        output_div.innerHTML += "<li>Equations are two l-group terms, separated by the symbol <code>=</code>. Similarly, separating terms with <code><=</code> encodes an inequation.</li>"
-        output_div.innerHTML += "</ul>";
+        output_div.innerHTML = "<ul id=\"list\"></ul>";
+        var list = document.getElementById("list");
+        list.innerHTML += "<li>Names of variables are alphabetic characters except <code>v</code> and <code>e</code>, possibly followed by a number, e.g., <code>x</code> or <code>x31</code>.</ul>"
+        list.innerHTML += "<li>Inverses of lower-case variables are their upper-case counterpart. E.g., the inverse of <code>x</code> is </code>X</code>.</li>"
+        list.innerHTML += "<li>The identity is denoted <code>e</code>.</li>"
+        list.innerHTML += "<li>Meets and joins are denoted by <code>^</code> and <code>v</code>, respectively. This means that the letter <code>v</code> can not appear in the name of a variable.</li>";
+        list.innerHTML += "<li>Inverses are denoted by prefix minus sign (<code>-</code>). Using this notation, the inverse of <code>x v y</code> is <code>-(x v y)</code>.</li>"
+        list.innerHTML += "<li>Whitespace and non-alphanumeric characters except <code>^</code>, <code>-</code>, <code>(</code>, and <code>)</code> are ignored. In particular, products do not have a symbol. The product of x v y and z ^ w can be written (x v z)(z ^ w).</li>"
+        list.innerHTML += "<li>Equations are two l-group terms, separated by the symbol <code>=</code>. Similarly, separating terms with <code><=</code> encodes an inequation.</li>"
     }
 
 });
