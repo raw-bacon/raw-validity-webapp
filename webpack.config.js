@@ -8,11 +8,10 @@ browserConfig = {
   mode: "production",
   entry: {
     index: "./js/index.js",
-    //worker: "./js/worker.js",
   },
   output: {
     path: dist,
-    filename: "[name].js"
+    filename: "[hash].[name].js"
   },
   devServer: {
     contentBase: dist,
