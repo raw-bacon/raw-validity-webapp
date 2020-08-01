@@ -1,3 +1,4 @@
+import Worker from 'worker-loader!./Worker.js';
 import("../pkg/index.js").catch(console.error).then(module => {
     var text_box = document.getElementById("text_box");
     var output_div = document.getElementById("output");
