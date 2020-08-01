@@ -11,7 +11,7 @@ browserConfig = {
   },
   output: {
     path: dist,
-    filename: "[hash].[name].js"
+    filename: "[name].js"
   },
   devServer: {
     contentBase: dist,
@@ -38,7 +38,7 @@ workerConfig = {
   ],
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[hash].worker.js"
+    filename: "worker.js"
   },
     mode: "production"
 }
