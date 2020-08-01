@@ -9,19 +9,27 @@ import("../pkg/index.js").catch(console.error).then(module => {
     // onclick for check button
     check_button.onclick = function check() {
         var input = text_box.value;
+        
+
+
         output_div.innerHTML = "<p id=\"response_paragraph\"></p>"
         response = document.getElementById("response_paragraph");
         response.innerHTML = "You submitted " + input + ".<br>";
-        response.innerHTML += "This formula is ";
-        response.innerHTML += "<a id='result_text'>...</a></p>"
-        if (module.check_valid(input)) {
-            document.getElementById("result_text").innerHTML = "valid!<br>";
-        } else {
-            document.getElementById("result_text").innerHTML = "invalid!<br>";
-        }
 
-        text_box.focus();
-        text_box.value = '';
+        response.innerHTML += "This formula is ";
+        response.innerHTML += "<i id='result_text'>... (computing; the window may appear frozen)</i></p>"
+
+        setTimeout(display_result, 1);
+        function display_result() {
+            if (module.check_valid(input)) {
+                document.getElementById("result_text").innerHTML = "valid!<br>";
+            } else {
+                document.getElementById("result_text").innerHTML = "invalid!<br>";
+            }
+
+            text_box.focus();
+            text_box.value = '';
+        }
     }
 
     // click submit on enter
