@@ -4,10 +4,11 @@ const WasmPackPlugin = require("@wasm-tool/wasm-pack-plugin");
 
 const dist = path.resolve(__dirname, "dist");
 
-module.exports = {
+browserConfig = {
   mode: "production",
   entry: {
-    index: "./js/index.js"
+    index: "./js/index.js",
+    //worker: "./js/worker.js",
   },
   output: {
     path: dist,
@@ -26,3 +27,17 @@ module.exports = {
     }),
   ]
 };
+
+
+workerConfig = {
+  entry: "./js/worker.js",
+  target: 'webworker',
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "worker.js"
+  },
+    mode: "production"
+}
+
+
+module.exports = [browserConfig, workerConfig]

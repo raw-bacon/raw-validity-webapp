@@ -3,6 +3,8 @@ import("../pkg/index.js").catch(console.error).then(module => {
     var output_div = document.getElementById("output");
     var check_button = document.getElementById("check_button");
 
+    var worker = new Worker('worker.js');
+
     // put cursor in textbox on load
     text_box.focus();
     
@@ -10,32 +12,27 @@ import("../pkg/index.js").catch(console.error).then(module => {
     check_button.onclick = function check() {
         var input = text_box.value;
         
-
-
         output_div.innerHTML = "<p id=\"response_paragraph\"></p>"
-        response = document.getElementById("response_paragraph");
+        var response = document.getElementById("response_paragraph");
         response.innerHTML = "You submitted " + input + ".<br>";
 
         response.innerHTML += "This formula is ";
         response.innerHTML += "<i id='result_text'>...</i></p>"
 
-        setTimeout(display_result, 1);
-        function display_result() {
-            if (module.check_valid(input)) {
-                document.getElementById("result_text").innerHTML = "valid!<br>";
-            } else {
-                document.getElementById("result_text").innerHTML = "invalid!<br>";
-            }
+        worker.postMessage(input);
 
-            text_box.focus();
-            text_box.value = '';
-        }
+        text_box.focus();
+        text_box.value = '';   
+    }
+
+    worker.onmessage = function (e) {
+        document.getElementById("result_text").innerHTML = e.data;
     }
 
     // click submit on enter
     text_box.addEventListener("keyup", function (event) {
         if (event.keyCode === 13) {
-            //event.preventDefault();
+            event.preventDefault();
             check_button.click();
         }
     });

@@ -10,21 +10,3 @@ cd my-project/
 npm init rust-webpack
 npm install
 ```
-
-# Deploying to GitHub Pages
-In the root of the master branch, run
-```
-npm install
-npm run build
-```
-Then copy the contents of the `dist` folder into the root of the `gh-pages` branch:
-```
-git switch gh-pages
-git rm *.js *.wasm index.html
-mv dist/* .
-rm -r -f target node_modules
-git add .
-git commit -m "deployed changes"
-git push origin gh-pages
-```
-Don't forget to `git switch master` at the end!
