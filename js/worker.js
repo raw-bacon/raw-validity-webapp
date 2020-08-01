@@ -1,4 +1,4 @@
-import("../pkg").catch(console.error).then(module => {
+import("../pkg/index.js").catch(console.error).then(module => {
     onmessage = function(input) {
         is_valid = module.check_valid(input.data);
         if (is_valid) {
