@@ -17,7 +17,7 @@ import("../pkg/index.js").catch(console.error).then(module => {
         response.innerHTML = "You submitted " + input + ".<br>";
 
         response.innerHTML += "This formula is ";
-        response.innerHTML += "<i id='result_text'>... (computing; the window may appear frozen)</i></p>"
+        response.innerHTML += "<i id='result_text'>...</i></p>"
 
         setTimeout(display_result, 1);
         function display_result() {
