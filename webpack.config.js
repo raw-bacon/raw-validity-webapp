@@ -38,7 +38,7 @@ workerConfig = {
   ],
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "worker.js"
+    filename: "[hash].worker.js"
   },
     mode: "production"
 }
