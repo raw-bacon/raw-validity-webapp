@@ -40,8 +40,7 @@ dependencies = [
 [[package]]
 name = "l_group_cnf"
 version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c8cd9f944e99d81af23a5d44488b7924906e87501de94fdc73ddb8d73d983314"
+source = "git+https://github.com/raw-bacon/raw-validity#6715a679eea581e38ef864e6982a32a300a418d5"
 dependencies = [
  "l_group_formulas",
 ]
@@ -49,14 +48,12 @@ dependencies = [
 [[package]]
 name = "l_group_formulas"
 version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7e11043982773151eaa8ea388002a6cd150671a5d7c6efbffbf293ddf530e7a9"
+source = "git+https://github.com/raw-bacon/raw-validity#6715a679eea581e38ef864e6982a32a300a418d5"
 
 [[package]]
 name = "l_group_validity"
 version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "251f82d206eeabf463ce78b6a0804af5e79fdb6c18b43d60f7574b71c4df69a8"
+source = "git+https://github.com/raw-bacon/raw-validity#6715a679eea581e38ef864e6982a32a300a418d5"
 dependencies = [
  "l_group_cnf",
  "l_group_formulas",
@@ -161,8 +158,7 @@ dependencies = [
 [[package]]
 name = "truncated_free_groups"
 version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "694e35de96e78cad3b929be508509b9f563f4221e127dfd5fb1dc248dc3c3ec1"
+source = "git+https://github.com/raw-bacon/raw-validity#6715a679eea581e38ef864e6982a32a300a418d5"
 dependencies = [
  "l_group_formulas",
 ]
