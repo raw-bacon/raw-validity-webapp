@@ -11,3 +11,5 @@ npm init rust-webpack
 npm install
 ```
 
+# Building
+See Github workflow.
