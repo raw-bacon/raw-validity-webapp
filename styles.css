@@ -1,0 +1,45 @@
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  font-size: 16pt;
+}
+
+h1 {
+  font-family: Helvetica;
+}
+
+button {
+    padding: 12px 0px;
+    margin: 0px 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: Helvetica;
+    font-size: 16pt;
+}
+
+p {
+  font-family: Helvetica;
+  font-size: 16pt;
+}
+
+.center {
+  margin: auto;
+  padding: 10px;
+}
+
+a, ul {
+  font-family: Helvetica;
+  text-decoration: none;
+}
+
+ul {
+  font-size: 14pt;
+}
+
+a {
+  color: #00aaff;
+  font-size: 16pt;
+}
